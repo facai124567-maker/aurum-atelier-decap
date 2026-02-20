@@ -6,6 +6,153 @@
   <title>Content Manager</title>
 </head>
 <body>
+  <script>
+    window.CMS_MANUAL_INIT = true;
+  </script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    const CMS_CONFIG = {
+      backend: {
+        name: "github",
+        repo: "facai124567-maker/aurum-atelier-decap",
+        branch: "main",
+        auth_type: "pkce",
+        app_id: "Ov23liSpcRKrczKmJwbi"
+      },
+      site_url: "https://aurum-atelier-decap.pages.dev",
+      display_url: "https://aurum-atelier-decap.pages.dev",
+      media_folder: "assets/uploads",
+      public_folder: "/assets/uploads",
+      collections: [
+        {
+          name: "products",
+          label: "Products",
+          folder: "content/products",
+          create: true,
+          slug: "{{slug}}",
+          extension: "json",
+          format: "json",
+          identifier_field: "name_en",
+          fields: [
+            { label: "Slug", name: "slug", widget: "string" },
+            { label: "Name (EN)", name: "name_en", widget: "string" },
+            { label: "Name (ZH)", name: "name_zh", widget: "string" },
+            { label: "Subtitle (EN)", name: "subtitle_en", widget: "string" },
+            { label: "Subtitle (ZH)", name: "subtitle_zh", widget: "string" },
+            { label: "Description (EN)", name: "desc_en", widget: "text" },
+            { label: "Description (ZH)", name: "desc_zh", widget: "text" },
+            { label: "Price (USD)", name: "price", widget: "number", value_type: "int" },
+            { label: "Compare Price (USD)", name: "compare_price", widget: "number", value_type: "int" },
+            {
+              label: "Tags (EN)",
+              name: "tags_en",
+              widget: "list",
+              field: { label: "Tag", name: "tag", widget: "string" }
+            },
+            {
+              label: "Tags (ZH)",
+              name: "tags_zh",
+              widget: "list",
+              field: { label: "标签", name: "tag", widget: "string" }
+            },
+            {
+              label: "Images",
+              name: "images",
+              widget: "object",
+              fields: [
+                { label: "Main", name: "main", widget: "image" },
+                {
+                  label: "Gallery",
+                  name: "gallery",
+                  widget: "list",
+                  field: { label: "Image", name: "image", widget: "image" }
+                }
+              ]
+            },
+            {
+              label: "Specs (EN)",
+              name: "specs_en",
+              widget: "list",
+              fields: [
+                { label: "Label", name: "label", widget: "string" },
+                { label: "Value", name: "value", widget: "string" }
+              ]
+            },
+            {
+              label: "Specs (ZH)",
+              name: "specs_zh",
+              widget: "list",
+              fields: [
+                { label: "标签", name: "label", widget: "string" },
+                { label: "内容", name: "value", widget: "string" }
+              ]
+            },
+            {
+              label: "Spec Table (EN)",
+              name: "spec_table_en",
+              widget: "list",
+              fields: [
+                { label: "Label", name: "label", widget: "string" },
+                { label: "Value", name: "value", widget: "string" }
+              ]
+            },
+            {
+              label: "Spec Table (ZH)",
+              name: "spec_table_zh",
+              widget: "list",
+              fields: [
+                { label: "标签", name: "label", widget: "string" },
+                { label: "内容", name: "value", widget: "string" }
+              ]
+            }
+          ]
+        },
+        {
+          name: "site",
+          label: "Site",
+          files: [
+            {
+              file: "content/site.json",
+              name: "home",
+              label: "Home",
+              format: "json",
+              fields: [
+                {
+                  label: "English",
+                  name: "en",
+                  widget: "object",
+                  fields: [
+                    { label: "Meta Title", name: "meta_title", widget: "string" },
+                    { label: "Meta Description", name: "meta_description", widget: "text" },
+                    { label: "Hero Pill", name: "hero_pill", widget: "string" },
+                    { label: "Hero Title", name: "hero_title", widget: "string" },
+                    { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" },
+                    { label: "CTA Primary", name: "cta_primary", widget: "string" },
+                    { label: "CTA Secondary", name: "cta_secondary", widget: "string" }
+                  ]
+                },
+                {
+                  label: "中文",
+                  name: "zh",
+                  widget: "object",
+                  fields: [
+                    { label: "标题", name: "meta_title", widget: "string" },
+                    { label: "描述", name: "meta_description", widget: "text" },
+                    { label: "主标语", name: "hero_pill", widget: "string" },
+                    { label: "主标题", name: "hero_title", widget: "string" },
+                    { label: "副标题", name: "hero_subtitle", widget: "text" },
+                    { label: "主按钮", name: "cta_primary", widget: "string" },
+                    { label: "次按钮", name: "cta_secondary", widget: "string" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    };
+
+    CMS.init({ config: CMS_CONFIG });
+  </script>
 </body>
 </html>
