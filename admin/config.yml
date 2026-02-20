@@ -17,6 +17,8 @@ collections:
     folder: "content/products"
     create: true
     slug: "{{slug}}"
+    extension: "json"
+    format: "json"
     identifier_field: "name_en"
     fields:
       - { label: "Slug", name: "slug", widget: "string" }
@@ -76,6 +78,7 @@ collections:
       - file: "content/site.json"
         name: "home"
         label: "Home"
+        format: "json"
         fields:
           - label: "English"
             name: "en"
