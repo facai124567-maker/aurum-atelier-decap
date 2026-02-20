@@ -1,0 +1,51 @@
+﻿{
+  "slug": "nocturne-gmt",
+  "name_en": "Nocturne GMT",
+  "name_zh": "Nocturne 双时区",
+  "subtitle_en": "Dual time zone with luminous markers for effortless travel tracking.",
+  "subtitle_zh": "双时区显示与夜光刻度，旅行读取更清晰。",
+  "desc_en": "Slim GMT profile with sapphire crystal, brushed case edges, and travel-ready comfort.",
+  "desc_zh": "纤薄 GMT 表壳与蓝宝石镜面，旅行佩戴更轻松。",
+  "price": 298,
+  "compare_price": 398,
+  "tags_en": ["GMT", "Lume", "Slim", "Sapphire"],
+  "tags_zh": ["GMT", "夜光", "纤薄", "蓝宝石"],
+  "images": {
+    "main": "/assets/uploads/nocturne-gmt.jpg",
+    "gallery": [
+      "/assets/uploads/nocturne-gmt.jpg",
+      "/assets/uploads/solace-automatic.jpg",
+      "/assets/uploads/aurora-petite.jpg",
+      "/assets/uploads/aero-chrono.jpg"
+    ]
+  },
+  "specs_en": [
+    {"label": "Movement", "value": "GMT, independent 24h hand"},
+    {"label": "Crystal", "value": "Sapphire, AR coating"},
+    {"label": "Water Resistance", "value": "100m / 10 ATM"},
+    {"label": "Strap", "value": "Italian leather, quick-release"}
+  ],
+  "specs_zh": [
+    {"label": "机芯", "value": "GMT 机芯，独立 24h 指针"},
+    {"label": "镜面", "value": "蓝宝石，防眩镀膜"},
+    {"label": "防水", "value": "100m / 10 ATM"},
+    {"label": "表带", "value": "意大利皮革，快拆系统"}
+  ],
+  "spec_table_en": [
+    {"label": "Case", "value": "39mm stainless steel"},
+    {"label": "Thickness", "value": "11.2mm"},
+    {"label": "Dial", "value": "Midnight blue, luminous indices"},
+    {"label": "Bezel", "value": "Fixed steel bezel"},
+    {"label": "GMT", "value": "Independent 24h hand"},
+    {"label": "Warranty", "value": "2-year international coverage"}
+  ],
+  "spec_table_zh": [
+    {"label": "表壳", "value": "39mm 不锈钢"},
+    {"label": "厚度", "value": "11.2mm"},
+    {"label": "表盘", "value": "午夜蓝，夜光刻度"},
+    {"label": "表圈", "value": "固定钢圈"},
+    {"label": "GMT", "value": "独立 24h 指针"},
+    {"label": "保修", "value": "2 年国际保修"}
+  ]
+}
+

@@ -1,0 +1,51 @@
+﻿{
+  "slug": "solace-automatic",
+  "name_en": "Solace Automatic",
+  "name_zh": "Solace 自动机芯",
+  "subtitle_en": "Mirror-finish steel, sapphire crystal, and a quiet automatic movement tuned for everyday balance.",
+  "subtitle_zh": "镜面级抛光表壳、蓝宝石镜面与稳定自动机芯，40mm 佩戴更均衡。",
+  "desc_en": "Balanced 40mm profile with sunburst dial, anti-reflective sapphire, and quick-release strap system.",
+  "desc_zh": "40mm 均衡表径，太阳纹表盘与防眩蓝宝石镜面，支持快拆表带。",
+  "price": 298,
+  "compare_price": 398,
+  "tags_en": ["Automatic", "Sapphire", "40mm", "Sunburst"],
+  "tags_zh": ["自动机芯", "蓝宝石", "40mm", "太阳纹"],
+  "images": {
+    "main": "/assets/uploads/solace-automatic.jpg",
+    "gallery": [
+      "/assets/uploads/solace-automatic.jpg",
+      "/assets/uploads/nocturne-gmt.jpg",
+      "/assets/uploads/aurora-petite.jpg",
+      "/assets/uploads/lumen-diver.jpg"
+    ]
+  },
+  "specs_en": [
+    {"label": "Movement", "value": "Automatic, 42h reserve"},
+    {"label": "Crystal", "value": "Sapphire, AR coating"},
+    {"label": "Water Resistance", "value": "100m / 10 ATM"},
+    {"label": "Strap", "value": "Italian leather, quick-release"}
+  ],
+  "specs_zh": [
+    {"label": "机芯", "value": "自动机芯，42 小时动储"},
+    {"label": "镜面", "value": "蓝宝石，防眩镀膜"},
+    {"label": "防水", "value": "100m / 10 ATM"},
+    {"label": "表带", "value": "意大利皮革，快拆系统"}
+  ],
+  "spec_table_en": [
+    {"label": "Case", "value": "40mm stainless steel, mirror polish"},
+    {"label": "Thickness", "value": "11.6mm"},
+    {"label": "Dial", "value": "Sunburst finish, luminous markers"},
+    {"label": "Bezel", "value": "Fixed steel bezel"},
+    {"label": "Power Reserve", "value": "Approx. 42 hours"},
+    {"label": "Warranty", "value": "2-year international coverage"}
+  ],
+  "spec_table_zh": [
+    {"label": "表壳", "value": "40mm 不锈钢，镜面抛光"},
+    {"label": "厚度", "value": "11.6mm"},
+    {"label": "表盘", "value": "太阳纹饰面，夜光刻度"},
+    {"label": "表圈", "value": "固定钢圈"},
+    {"label": "动储", "value": "约 42 小时"},
+    {"label": "保修", "value": "2 年国际保修"}
+  ]
+}
+
