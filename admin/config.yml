@@ -2,11 +2,11 @@
   name: github
   repo: facai124567-maker/aurum-atelier-decap
   branch: main
-  base_url: https://decap-cms-oauth.netlify.app
-  auth_endpoint: auth
+  auth_type: pkce
+  app_id: Iv23liL7XgHeug7Op2LQ
 
-site_url: https://aurum-atelier.pages.dev
-display_url: https://aurum-atelier.pages.dev
+site_url: https://aurum-atelier-decap.pages.dev
+display_url: https://aurum-atelier-decap.pages.dev
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
