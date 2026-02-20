@@ -1,4 +1,4 @@
-﻿backend:
+backend:
   name: github
   repo: facai124567-maker/aurum-atelier-decap
   branch: main
