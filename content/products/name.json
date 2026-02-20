@@ -1,0 +1,45 @@
+{
+  "name_zh": "名字",
+  "spec_table_zh": [
+    {
+      "label": "12312",
+      "value": "123"
+    }
+  ],
+  "price": 298,
+  "slug": "测试",
+  "compare_price": 396,
+  "tags_en": [
+    "111en"
+  ],
+  "subtitle_en": "sub",
+  "specs_en": [
+    {
+      "label": "111",
+      "value": "111"
+    }
+  ],
+  "tags_zh": [
+    "中文",
+    "中文2"
+  ],
+  "subtitle_zh": "字幕",
+  "specs_zh": [
+    {
+      "label": "123123",
+      "value": "123123"
+    }
+  ],
+  "desc_en": "miaoshumiaoshu",
+  "images": {
+    "main": "/assets/uploads/lumen-diver.jpg"
+  },
+  "desc_zh": "描述描述",
+  "name_en": "name",
+  "spec_table_en": [
+    {
+      "label": "123213",
+      "value": "123123"
+    }
+  ]
+}
