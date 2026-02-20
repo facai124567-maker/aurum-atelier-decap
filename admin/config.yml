@@ -2,11 +2,12 @@ backend:
   name: github
   repo: facai124567-maker/aurum-atelier-decap
   branch: main
-  auth_type: pkce
-  app_id: Ov23liSpcRKrczKmJwbi
+  base_url: https://aurum-atelier-decap.pages.dev
+  auth_endpoint: /api/auth
 
 site_url: https://aurum-atelier-decap.pages.dev
 display_url: https://aurum-atelier-decap.pages.dev
+site_domain: https://aurum-atelier-decap.pages.dev
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"

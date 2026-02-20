@@ -281,9 +281,9 @@ function renderHome(lang) {
   const text = copy[lang];
   const meta = site[lang];
   const hreflang = {
-    en: "https://aurum-atelier.pages.dev/en/",
-    zh: "https://aurum-atelier.pages.dev/zh/",
-    default: "https://aurum-atelier.pages.dev/"
+    en: "https://aurum-atelier-decap.pages.dev/en/",
+    zh: "https://aurum-atelier-decap.pages.dev/zh/",
+    default: "https://aurum-atelier-decap.pages.dev/"
   };
   const body = `
 ${renderHeader(lang)}
@@ -458,11 +458,11 @@ function renderProductPage(product, lang) {
   const tags = lang === "en" ? product.tags_en : product.tags_zh;
   const gallery = product.images.gallery || [];
   const otherLang = lang === "en" ? "zh" : "en";
-  const canonical = `https://aurum-atelier.pages.dev/${lang}/${product.slug}/`;
+  const canonical = `https://aurum-atelier-decap.pages.dev/${lang}/${product.slug}/`;
   const hreflang = {
-    en: `https://aurum-atelier.pages.dev/en/${product.slug}/`,
-    zh: `https://aurum-atelier.pages.dev/zh/${product.slug}/`,
-    default: `https://aurum-atelier.pages.dev/`
+    en: `https://aurum-atelier-decap.pages.dev/en/${product.slug}/`,
+    zh: `https://aurum-atelier-decap.pages.dev/zh/${product.slug}/`,
+    default: `https://aurum-atelier-decap.pages.dev/`
   };
   const related = getRelatedProducts(product.slug, 3);
 
@@ -688,10 +688,10 @@ function renderLanguageSelector() {
   <title>Choose Language | 选择语言</title>
   <meta name="description" content="Choose your language to view the watch collection. 请选择语言以浏览腕表系列。" />
   <meta name="robots" content="noindex,follow" />
-  <link rel="canonical" href="https://aurum-atelier.pages.dev/" />
-  <link rel="alternate" hreflang="en" href="https://aurum-atelier.pages.dev/en/" />
-  <link rel="alternate" hreflang="zh-CN" href="https://aurum-atelier.pages.dev/zh/" />
-  <link rel="alternate" hreflang="x-default" href="https://aurum-atelier.pages.dev/" />
+  <link rel="canonical" href="https://aurum-atelier-decap.pages.dev/" />
+  <link rel="alternate" hreflang="en" href="https://aurum-atelier-decap.pages.dev/en/" />
+  <link rel="alternate" hreflang="zh-CN" href="https://aurum-atelier-decap.pages.dev/zh/" />
+  <link rel="alternate" hreflang="x-default" href="https://aurum-atelier-decap.pages.dev/" />
   <link rel="stylesheet" href="/assets/style.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" />
 </head>
@@ -761,6 +761,7 @@ function build() {
 
   copyDir(path.join(root, "assets"), path.join(distDir, "assets"));
   copyDir(path.join(root, "admin"), path.join(distDir, "admin"));
+  copyDir(path.join(root, "functions"), path.join(distDir, "functions"));
 }
 
 build();
