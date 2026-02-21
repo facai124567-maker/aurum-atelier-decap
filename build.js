@@ -203,9 +203,9 @@ function renderHead({ title, description, canonical, hreflang, lang }) {
 
 function renderHeader(lang) {
   const text = copy[lang];
-  const otherLang = lang === "en" ? "zh" : "en";
-  const langUrl = lang === "en" ? "/en/" : "/zh/";
-  const otherUrl = otherLang === "en" ? "/en/" : "/zh/";
+  const enUrl = "/en/";
+  const zhUrl = "/zh/";
+  const isEn = lang === "en";
   return `
   <header>
     <div class="container nav">
@@ -215,15 +215,15 @@ function renderHeader(lang) {
       </div>
       <nav aria-label="Primary">
         <ul>
-          <li><a href="${langUrl}#collections">${text.nav.collections}</a></li>
-          <li><a href="${langUrl}#craft">${text.nav.craft}</a></li>
-          <li><a href="${langUrl}#reviews">${text.nav.reviews}</a></li>
-          <li><a href="${langUrl}#service">${text.nav.service}</a></li>
+          <li><a href="${isEn ? enUrl : zhUrl}#collections">${text.nav.collections}</a></li>
+          <li><a href="${isEn ? enUrl : zhUrl}#craft">${text.nav.craft}</a></li>
+          <li><a href="${isEn ? enUrl : zhUrl}#reviews">${text.nav.reviews}</a></li>
+          <li><a href="${isEn ? enUrl : zhUrl}#service">${text.nav.service}</a></li>
         </ul>
       </nav>
       <div class="lang-switch" role="navigation" aria-label="Language">
-        <a class="${lang === "en" ? "active" : ""}" href="${langUrl}" lang="en" aria-current="${lang === "en" ? "page" : "false"}">English</a>
-        <a class="${lang === "zh" ? "active" : ""}" href="${otherUrl}" lang="zh-CN" aria-current="${lang === "zh" ? "page" : "false"}">中文</a>
+        <a class="${isEn ? "active" : ""}" href="${enUrl}" lang="en" aria-current="${isEn ? "page" : "false"}">English</a>
+        <a class="${!isEn ? "active" : ""}" href="${zhUrl}" lang="zh-CN" aria-current="${!isEn ? "page" : "false"}">中文</a>
       </div>
     </div>
   </header>
