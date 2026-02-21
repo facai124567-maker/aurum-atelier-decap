@@ -57,8 +57,16 @@ const site = readJSON(path.join(contentDir, "site.json"));
 const products = fs
   .readdirSync(productsDir)
   .filter((file) => file.endsWith(".json"))
-  .map((file) => readJSON(path.join(productsDir, file)))
-  .sort((a, b) => a.name_en.localeCompare(b.name_en));
+  .map((file) => {
+    const filePath = path.join(productsDir, file);
+    const data = readJSON(filePath);
+    const stat = fs.statSync(filePath);
+    return {
+      ...data,
+      __mtime: stat.mtimeMs,
+    };
+  })
+  .sort((a, b) => b.__mtime - a.__mtime);
 
 const copy = {
   en: {
@@ -259,7 +267,9 @@ function renderHero(lang) {
 function renderProductCard(product, lang) {
   const name = lang === "en" ? product.name_en : product.name_zh;
   const desc = lang === "en" ? product.desc_en : product.desc_zh;
-  const tags = lang === "en" ? product.tags_en : product.tags_zh;
+  const tags = (lang === "en" ? product.tags_en : product.tags_zh) || [];
+  const visibleTags = tags.slice(0, 4);
+  const extraCount = tags.length - visibleTags.length;
   const url = `/${lang}/${product.slug}/`;
   return `
   <article class="product">
@@ -269,7 +279,8 @@ function renderProductCard(product, lang) {
     <h3>${escapeHtml(name)}</h3>
     <p>${escapeHtml(desc)}</p>
     <div class="pill-row">
-      ${tags.map((tag) => `<span class="pill">${escapeHtml(tag)}</span>`).join("")}
+      ${visibleTags.map((tag) => `<span class="pill">${escapeHtml(tag)}</span>`).join("")}
+      ${extraCount > 0 ? `<span class="pill">+${extraCount}</span>` : ""}
     </div>
     <span class="price">${formatPrice(product.price)}</span>
     <a class="btn secondary" href="${url}">${lang === "en" ? "View Details" : "查看详情"}</a>

@@ -275,18 +275,39 @@ body.lang-zh .lang-block.lang-zh {
 .product h3 {
   margin: 0;
   font-size: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 52px;
+}
+
+.product p {
+  color: var(--muted);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 72px;
 }
 
 .product .price {
   font-weight: 700;
   font-size: 18px;
   color: var(--accent-2);
+  margin-top: auto;
+}
+
+.product .btn.secondary {
+  margin-top: 6px;
 }
 
 .pill-row {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  min-height: 32px;
 }
 
 .pill {
